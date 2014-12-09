@@ -1,0 +1,11 @@
+.check-info {
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    box-sizing: border-box;
+    background: #c9394a;
+    border: 1px solid #fff;
+    opacity: .7;
+    z-index: 9999;
+}
