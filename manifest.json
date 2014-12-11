@@ -20,14 +20,25 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "link checker"
-    // "default_popup": "popup.html"
+    "default_title": "link checker",
+    "default_popup": "popup.html"
   },
 
   "web_accessible_resources": [
     "styles/style.css"
   ],
 
+  "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "scripts/jquery.js", "scripts/checker.js" ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_end"
+  }, {
+      "all_frames": true,
+      "css": [ "styles/style.css" ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_end"    
+  }],
 
   "permissions": ["<all_urls>", "activeTab"]
 }

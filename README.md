@@ -6,7 +6,10 @@
 
 ## 功能
 
-- 检查页面链接的target  
+- 检查链接的target 
+
+### 检查链接的target 
+
 target为空(默认为_self)或_self，则显示`当`  
 target为_blank，则显示`新`  
 
@@ -18,3 +21,20 @@ target为_blank，则显示`新`
 
 ## TODO
 
+- 检查链接地址 (是否为空，是否为javascript:;)
+    - 检查链接是否为#
+    - 连接是否合法，是否会有多个?号，
+- 借鉴这个 http://www.feedthebot.com/tools/linkcount/
+    - image links
+
+
+将来
+
+## 疑问
+
+- 如果链接是隐藏的，是否还显示
+- 链接 href哪种比较好 `/enternewzone?gkey=$item[gkey]`还是带上完整前缀，
+
+## 参考
+
+https://developer.chrome.com/extensions/tabs

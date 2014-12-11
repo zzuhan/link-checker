@@ -8,4 +8,9 @@
     border: 1px solid #fff;
     opacity: .7;
     z-index: 9999;
+
+    /* 文字垂直水平居中 */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* alig  */  
 }

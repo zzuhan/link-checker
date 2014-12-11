@@ -9,9 +9,17 @@
         <!-- build:css styles/main.css -->
         <link href="styles/main.css" rel="stylesheet">
         <!-- endbuild -->
+        <style>
+        ul {
+            list-style: none;
+        }
+        </style>
     </head>
     <body>
-        <h1>'Allo, 'Allo!</h1>
+        <ul>
+            <li><a href="" class="j-check" data-type="target">检测target</a></li>
+            <li><a href="" class="j-check" data-type="href">检测href</a></li>
+        </ul>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -19,6 +27,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/popup.js -->
+        <script src="scripts/jquery.js"></script>
         <script src="scripts/popup.js"></script>
         <!-- endbuild -->
     </body>
