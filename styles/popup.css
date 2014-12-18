@@ -1,0 +1,33 @@
+body {
+  /*padding: 20px;*/
+  font-size: 14px;
+}
+a {
+    color: #069;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.type-list {
+    width: 199px;
+    text-align: center;
+}
+.type-list li {
+    height: 30px;
+    line-height: 30px;
+    padding: 
+}
+.type-list a {
+    /*display: block;*/
+}

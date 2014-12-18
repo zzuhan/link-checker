@@ -27,6 +27,9 @@ target为_blank，则显示`新`
 - 借鉴这个 http://www.feedthebot.com/tools/linkcount/
     - image links
 
+## 连接合法性检查
+
+http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url
 
 将来
 

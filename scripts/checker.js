@@ -7,8 +7,6 @@
 // head||document.documentElement).appendChild(style);
 // 
 
-
-
 var helper = {
   // 获取dom的坐标信息
   getDOMObjectPosition: function(obj, defaultZIndex) {
@@ -139,15 +137,18 @@ var checker = {
       text: ''
     }
 
-    var abbrs = {
+    var map = {
       '_blank': '新',
-      'null': '当'
-    }
+      'null': '当',
+      '_self': '当',
+      '_top': '_top',
+      '_parent': '_parent'
+    },
+    target;
 
-    var target = obj.getAttribute('link');
+    target = obj.getAttribute('target');
 
-    // var content = 'target:' + abbrs[info.target];
-    result.text = abbrs[target];
+    result.text = map[target];
 
     return result;
   },
@@ -156,14 +157,24 @@ var checker = {
     var result = {
       show: false,
       text: ''
-    }
-    var href = obj.getAttribute('href');
+    },
+    urlReg = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi,
+    // 跟getAttribute结果不同，obj.href是最后真实的absolute地址，
+    // 如<a href="/"></a> 如果在baidu.com下，则会返回baidu.com    
+    href = obj.href;
 
+    // 链接内容检查
     if (href == '') {
       result.text = '空'
     } else if (href == null) {
       result.text = 'null';
     }
+
+    // 连接合法性检查
+    if(href && href.length > 0) {
+      if(urlReg.test(href)) result.text = '不法';
+    }
+    
 
     if (result.text) result.show = true;
     return result;
